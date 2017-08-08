@@ -1,0 +1,52 @@
+{
+  "name": "exampleYT",
+  "version": "1.0.0",
+  "description": "YouTube API Tutorial",
+  "main": "./assets/js/bundle.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "dev": "gulp"
+  },
+  "keywords": [],
+  "author": "Tutmee",
+  "license": "ISC",
+  "browserify": {
+    "transform": "browserify-shim"
+  },
+  "browser": {
+    "jquery": "./dev/js/lib/jquery-2.1.4.min.js"
+
+  },
+  "browserify-shim": {
+    "jquery": "$"
+  },
+  "dependencies": {
+    "object-fit-images": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015-ie": "^6.6.2",
+    "babelify": "^7.3.0",
+    "bemto.pug": "^2.1.0",
+    "browserify": "^14.0.0",
+    "browserify-shim": "^3.8.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-jsbeautifier": "^2.0.3",
+    "gulp-jshint": "~1.9.0",
+    "gulp-jslint": "^1.0.9",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "jshint-stylish": "^1.0.0",
+    "npmignore": "^0.2.0",
+    "object-fit-images": "^3.2.1",
+    "systemjs": "^0.20.5",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

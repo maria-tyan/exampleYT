@@ -1,0 +1,61 @@
+.main-block {
+    position: relative;
+    overflow: hidden;
+    background-image: url("../images/bg1.jpg");
+    background-position: center -80px;
+    background-repeat: no-repeat;
+    background-color: $light-gray;
+    padding-top: 104px;
+    padding-bottom: 20px;
+
+    .kirpich {
+        display: block;
+        margin: 27px auto 36px;
+    }
+
+    .btn-style {
+        margin: 0 auto;
+        max-width: 340px;
+        display: block;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "Open Sans";
+        display: inline-block;
+        width: 140px;
+    }
+
+    h1 {
+        padding-bottom: 28px;
+    }
+
+    ul {
+        display: inline-block;
+
+        li {
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+
+            &:before {
+                content: '';
+                background-image: url("../images/tick-inside.png");
+                width: 47px;
+                height: 47px;
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.white-block {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 32px 70px;
+    background-color: $white;
+}

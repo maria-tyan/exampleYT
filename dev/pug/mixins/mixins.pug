@@ -1,0 +1,53 @@
+mixin list_with_title(arr)
+    -var list_counter = 0.8
+    -for (var i = 0; i < arr.length; i++)
+        div.animated(data-animate-type="fadeInLeft," + list_counter + "s")
+            h3=arr[i].title 
+            ul
+                -for(var k = 0; k < arr[i].content.length; k++)
+                    li
+                        a(href=arr[i].content[k].link,title=arr[i].content[k].text)=arr[i].content[k].text
+            -list_counter = (list_counter * 10 - 2)/10
+mixin list_link(arr)
+    -for (var i = 0; i < arr.length; i++)
+        .content_block_link.inline_wrap
+            a(href=arr[i].link,title=arr[i].content)
+                span=arr[i].content
+mixin list_footer(arr)
+    -for (var i = 0; i < arr.length; i++)
+        div
+            p=arr[i].title
+            ul
+                -for(var k = 0; k < arr[i].content.length; k++)
+                    li
+                        a(href=arr[i].content[k].link,title=arr[i].content[k].text)=arr[i].content[k].text
+mixin nav_header(title, path)
+    .nav
+        .content_block
+            ul
+            -for (var i = 0; i < path.length; i++)
+                li.nav_block_link
+                    if(i == (path.length-1))
+                        span=path[i]
+                    else 
+                        a(href="#",title=path[i])=path[i]
+    .page-title_block
+        .content_block
+            h2= title
+mixin nav_buttons(title, path)
+    .nav-buttons
+        .content_block
+            .pagination_container
+                ul
+                    li.pagination-prev
+                        a.pagenav(title="Назад", href="#") Назад
+                    li.pagination-next
+                        a.pagenav(title="Вперёд", href="#") Вперёд
+
+                    if(title && path)
+                        a(href=path, title=title).nav-buttons__link !{title}
+mixin hidden_nav_mixin(arr)
+    ul.hidden_nav_list
+        -for (var i = 0; i < arr.length; i++)
+            li
+                a(href=arr[i].link,title=arr[i].title)=arr[i].title
