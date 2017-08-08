@@ -6,12 +6,8 @@ doctype html
 block variables
     -var homepage
 html(lang='ru')
-    +head('Кирпич')
+    +head('YouTube API Tutorial')
     body
         .content
-            include modules/header.pug
             block content
-        include modules/footer.pug
-        include modules/popup.pug
-        script(src="https://api-maps.yandex.ru/2.1/?load=package.standard&lang=ru-RU", type="text/javascript")
         script(src="js/bundle.js")

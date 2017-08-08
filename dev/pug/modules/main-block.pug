@@ -1,11 +1,31 @@
 +b.SECTION.main-block
     .content-block
-        h1 Профессиональная кирпичная компания Кирпич.РУ - № 1 в России 
-        +b.white-block
-            p предлагает
-            ul
-                li Облицовочный кирпич
-                li Цветные кладочные смеси
-        img.kirpich(src='images/big-kirpich.png', alt='Кирпич')
-        +b.btn-style.js-order(data-from='Получить специальную цену')
-            span получить специальную цену 
+        h1 YouTube API Tutorial
+        //- h2 Пример 1.
+
+        +b#video-player(data-id='5dsGWM5XGdg')
+        +b.flex-wrap
+            +b.btn-wrap
+                +b.btn-style.js-cueVideoById-video(data-id='QFH747sK200')
+                    span Запустить другое видео
+                p используется функция
+                    strong cueVideoById()
+            +b.btn-wrap
+                +b.btn-style.js-loadVideoById-video(data-id='dOMXjIrzeww')
+                    span Видео с лисичками
+                p используется функция
+                    strong loadVideoById()
+        +b.flex-wrap_center
+            +b.btn-wrap
+                +b.btn-style.js-play-video
+                    i.fa.fa-play
+            +b.btn-wrap
+                +b.btn-style.js-stop-video
+                    i.fa.fa-stop
+            +b.btn-wrap
+                +b.btn-style.js-backward-video
+                    i.fa.fa-backward
+            +b.btn-wrap
+                +b.btn-style.js-forward-video
+                    i.fa.fa-forward
+            

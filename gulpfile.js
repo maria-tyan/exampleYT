@@ -23,8 +23,6 @@ gulp.task('css', function () {
    
 });
 
-var catalog = require('./dev/json/catalog.json');
-
 gulp.task('pug', function() {
    return gulp.src('dev/pug/pages/*.pug').pipe(plumber({
             errorHandler: function (error, file) {
@@ -33,8 +31,7 @@ gulp.task('pug', function() {
             }
         }))
         .pipe(pug({
-            pretty: true,
-            locals: catalog
+            pretty: true
         }))
         .pipe(prettify({
             config: './dev/json/config-pug.json'
