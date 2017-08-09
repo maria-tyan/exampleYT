@@ -29,6 +29,7 @@ var project = {
         this.$stopVideo = $('.js-stop-video');
         this.$forwardVideo = $('.js-forward-video');
         this.$backwardVideo = $('.js-backward-video');
+        this.$videoImg = $('.js-img');
         
     },
     initYouTube: function () {
@@ -54,23 +55,29 @@ var project = {
 
             playerBg = new YT.Player('video-bg', { 
                 height: '1240', 
-                width:  1.3 * $(window).width(), 
-                playerVars: {'rel': 0, 'controls': 0, 'showinfo': 0, 'loop': 0, 'star': 0, 'autoplay': 1, 'origin': domen},
+                width:  '2200', 
+                playerVars: {
+                    'rel': 0, 
+                    'controls': 0, 
+                    'showinfo': 0, 
+                    'autoplay': 1, 
+                    'origin': domen
+                },
                 videoId: 'HtBEf2D0x5Y', 
                 events: { 
                     'onStateChange': onPlayerStateChange
                 }
-            });
+            });            
+        }
 
-            function  onPlayerStateChange(event) {
-                console.log(event.data == 0);
-                if (event.data == 1) {
-                    playerBg.mute();
-                }
-                if (event.data == 0) {
-                    playerBg.seekTo(0);
-                    playerBg.playVideo();
-                }
+        function  onPlayerStateChange(event) {
+            if (event.data == 1) {
+                playerBg.mute();
+                project.$videoImg.hide();
+            }
+            if (event.data == 0) {
+                playerBg.seekTo(0);
+                playerBg.playVideo();
             }
         }
 
