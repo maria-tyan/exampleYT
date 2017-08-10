@@ -23,7 +23,7 @@ var project = {
 
         var player; 
         var playerBg;
-        var domen = window.location.hostname;
+        var domain = window.location.hostname;
         var videoID = $('#video-player').attr('data-id');
 
         window.onYouTubeIframeAPIReady = function() {
@@ -44,7 +44,7 @@ var project = {
                     'controls': 0, 
                     'showinfo': 0, 
                     'autoplay': 1, 
-                    'origin': domen
+                    'origin': domain
                 },
                 videoId: 'HtBEf2D0x5Y', 
                 events: { 
